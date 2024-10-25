@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #0065cd; /* Cor de destaque */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.links {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.links:hover {
+    transform: translateY(-2px);
+}
+
+.links h2 {
+    margin-bottom: 15px;
+    color: #0065cd;
+    border-bottom: 2px solid #00bf63; /* Linha de destaque */
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0065cd;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid transparent; /* Efeito de borda */
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+a:hover {
+    border-color: #00bf63; /* Cor da borda ao passar o mouse */
+    background-color: rgba(0, 191, 99, 0.1); /* Fundo ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
