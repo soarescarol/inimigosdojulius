@@ -3,7 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.imagem-redonda {
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem horizontalmente */
+    width: 150px; /* Define o tamanho da imagem */
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
