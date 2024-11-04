@@ -3,15 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Estilos de imagem */
 .imagem-redonda {
     display: block;
-    margin: 20px auto; /* Centraliza a imagem horizontalmente */
-    width: 150px; /* Define o tamanho da imagem */
+    margin: 20px auto;
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Garante que a imagem preencha o espaço */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilos gerais do corpo */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
@@ -19,6 +23,7 @@ body {
     padding: 20px;
 }
 
+/* Estilos do cabeçalho */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -26,7 +31,7 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    color: #59626b; /* Cor de destaque */
+    color: #59626b;
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -36,11 +41,13 @@ header p {
     color: #555;
 }
 
+/* Estilos principais */
 main {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Estilos de links */
 .links {
     background-color: #fff;
     padding: 20px;
@@ -56,7 +63,7 @@ main {
 .links h2 {
     margin-bottom: 15px;
     color: #000000;
-    border-bottom: 2px solid #a8adab; /* Linha de destaque */
+    border-bottom: 2px solid #a8adab;
     padding-bottom: 10px;
 }
 
@@ -73,16 +80,21 @@ a {
     color: #636b74;
     font-weight: bold;
     padding: 10px;
-    border: 2px solid transparent; /* Efeito de borda */
+    border: 2px solid transparent;
     border-radius: 8px;
     transition: all 0.3s;
 }
 
 a:hover {
-    border-color: #595961; /* Cor da borda ao passar o mouse */
-    background-color: rgba(85, 87, 86, 0.1); /* Fundo ao passar o mouse */
+    border-color: #595961;
+    background-color: rgba(85, 87, 86, 0.1);
 }
 
+a:active {
+    background-color: rgba(85, 87, 86, 0.2);
+}
+
+/* Estilos do rodapé */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -90,3 +102,105 @@ footer {
     color: #777;
 }
 
+/* Estilos de produtos */
+.produtos {
+    margin-top: 20px;
+}
+
+.produtos h2 {
+    color: #636b74;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos do carrossel */
+.carrossel-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    position: relative; /* Necessário para posicionar os indicadores */
+}
+
+.carrossel {
+    flex-grow: 1; /* Faz com que o carrossel ocupe todo o espaço disponível */
+    display: flex;
+    overflow-x: hidden;
+    gap: 10px;
+    padding: 10px;
+}
+
+.produto {
+    min-width: calc((100%/3)-20px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    transition: transform 0.3s ease;
+}
+
+.produto:hover img {
+    transform: scale(1.2);
+}
+
+/* Estilos do carrossel de indicadores */
+.indicadores {
+    display: flex;
+    flex-direction: column; /* Alinha os indicadores em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    margin-left: 10px; /* Espaçamento entre o carrossel e os indicadores */
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Cor do pontinho */
+    border-radius: 50%; /* Faz o pontinho ser redondo */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s; /* Transição suave */
+    margin: 5px 0; /* Espaçamento entre os indicadores */
+}
+
+.indicador.visivel {
+    opacity: 1; /* Torna o indicador visível */
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .links {
+        padding: 10px;
+    }
+
+    .produto {
+        padding: 10px;
+        min-width: 70%; /* Aumenta a largura mínima para melhor visualização em telas pequenas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .produto {
+        min-width: 45%; /* Reduz a largura mínima para acomodar mais produtos */
+    }
+}
+
+@media (min-width: 901px) {
+    .produto {
+        min-width: 30%; /* Define a largura mínima para desktops */
+    }
+}
